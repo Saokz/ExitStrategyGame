@@ -27,7 +27,7 @@ public class GameStateManager {
 	}
 	
 	private void initStates(){
-		states[0] = new StartState(i);
+		states[0] = new StartState(i, this);
 	}
 	
 	public void setState(int id){
