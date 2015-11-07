@@ -7,6 +7,8 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import org.sweatyink.com.core.GameStateManager;
+
 public class GameMain extends Canvas implements Runnable{
 	private static final long serialVersionUID = 3325571184092106015L;
 
@@ -16,13 +18,14 @@ public class GameMain extends Canvas implements Runnable{
 	
 	private boolean running = false;
 	private Thread t;
+	private GameStateManager m;
 	
 	public GameMain(){
-		
+		m = new GameStateManager();
 	}
 	
 	private void tick(){
-		
+		m.tick();
 	}
 	
 	private void render(){
@@ -36,6 +39,8 @@ public class GameMain extends Canvas implements Runnable{
 		
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
+		
+		m.render(g);
 		
 		g.dispose();
 		bs.show();
