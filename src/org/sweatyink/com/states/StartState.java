@@ -14,8 +14,8 @@ public class StartState extends GameState{
 	};
 	private int currentOption = 0;
 
-	public StartState(InputHandler i, GameStateManager m){
-		super(i, m);
+	public StartState(String name, int ID, InputHandler i, GameStateManager m){
+		super(name, ID, i, m);
 	}
 	
 	public void tick() {
@@ -38,7 +38,7 @@ public class StartState extends GameState{
 				System.exit(0);
 			}
 			if(options[currentOption] == "Start"){
-				System.exit(0);
+				m.setState(m.MainID);
 			}
 		}
 	}
