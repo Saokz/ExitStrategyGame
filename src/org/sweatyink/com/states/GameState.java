@@ -11,7 +11,9 @@ public abstract class GameState {
 	protected InputHandler i;
 	protected GameStateManager m;
 	
-	public GameState(InputHandler i, GameStateManager m){
+	public GameState(String name, int ID, InputHandler i, GameStateManager m){
+		this.ID = ID;
+		this.name = name;
 		this.i = i;
 		this.m = m;
 	}
