@@ -1,5 +1,26 @@
 package org.sweatyink.com.core;
 
-public class Handler {
+import java.awt.Graphics;
+import java.util.LinkedList;
 
+import org.sweatyink.com.entity.GameObject;
+
+public class Handler {
+	private LinkedList<GameObject> objects = new LinkedList<GameObject>();
+	
+	public Handler(){
+		
+	}
+
+	public void render(Graphics g) {
+		for(GameObject o : objects){
+			o.render(g);
+		}
+	}
+
+	public void tick() {
+		for(GameObject o : objects){
+			o.tick();
+		}
+	}
 }
