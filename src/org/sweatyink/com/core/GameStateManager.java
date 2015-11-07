@@ -3,6 +3,7 @@ package org.sweatyink.com.core;
 import java.awt.Graphics;
 
 import org.sweatyink.com.states.GameState;
+import org.sweatyink.com.states.StartState;
 
 public class GameStateManager {
 	public static final int StartID = 0;
@@ -16,7 +17,13 @@ public class GameStateManager {
 	private GameState currentState;
 	
 	public GameStateManager(){
+		initStates();
+		
 		currentState = states[StartID];
+	}
+	
+	private void initStates(){
+		states[0] = new StartState();
 	}
 	
 	public void setState(int id){
