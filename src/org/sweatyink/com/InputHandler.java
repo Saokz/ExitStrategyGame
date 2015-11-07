@@ -1,3 +1,5 @@
+/*
+THIS IS UNNECESSARY - Kenny
 package org.sweatyink.com;
 
 import java.awt.event.KeyEvent;
@@ -89,3 +91,4 @@ public class InputHandler implements KeyListener {
 	public void keyTyped(KeyEvent ke) {
 	}
 }
+*/
