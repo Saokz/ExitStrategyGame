@@ -1,5 +1,13 @@
 package org.sweatyink.com.core;
 
-public class HUD {
+import java.awt.Graphics;
 
+public class HUD {
+	public void tick() {
+		
+	}
+
+	public void render(Graphics g) {
+		
+	}
 }
