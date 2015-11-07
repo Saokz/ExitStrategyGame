@@ -25,6 +25,8 @@ public class Player implements KeyListener{
 	
 	public int getX(){return x;};
 	public int getY(){return y;}
+	public void setX(int par1x){x = par1x;};
+	public void setY(int par1y){y = par1y;};
 
 	@Override
 	public void keyPressed(KeyEvent e) {
