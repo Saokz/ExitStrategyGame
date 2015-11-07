@@ -5,6 +5,7 @@ import java.awt.Graphics;
 
 import org.sweatyink.com.GameMain;
 import org.sweatyink.com.InputHandler;
+import org.sweatyink.com.core.GameStateManager;
 
 public class StartState extends GameState{
 	private String[] options = {
@@ -13,8 +14,8 @@ public class StartState extends GameState{
 	};
 	private int currentOption = 0;
 
-	public StartState(InputHandler i){
-		super(i);
+	public StartState(InputHandler i, GameStateManager m){
+		super(i, m);
 	}
 	
 	public void tick() {
@@ -32,8 +33,14 @@ public class StartState extends GameState{
 				currentOption = options.length - 1;
 			}
 		}
-		
-		System.out.println(currentOption);
+		if(i.menu.clicked){
+			if(options[currentOption] == "Exit"){
+				System.exit(0);
+			}
+			if(options[currentOption] == "Start"){
+				System.exit(0);
+			}
+		}
 	}
 
 	public void render(Graphics g) {
