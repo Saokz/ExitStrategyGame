@@ -4,22 +4,27 @@ import java.awt.Graphics;
 import java.util.LinkedList;
 
 import org.sweatyink.com.entity.GameObject;
+import org.sweatyink.com.entity.Walls;
 
 public class Handler {
-	private LinkedList<GameObject> objects = new LinkedList<GameObject>();
+	public LinkedList<GameObject> objects = new LinkedList<GameObject>();
 	
 	public Handler(){
 		
 	}
 
 	public void render(Graphics g) {
-		for(GameObject o : objects){
+		for(int i = 0; i < objects.size(); i++){
+			GameObject o = objects.get(i);
+
 			o.render(g);
 		}
 	}
 
 	public void tick() {
-		for(GameObject o : objects){
+		for(int i = 0; i < objects.size(); i++){
+			GameObject o = objects.get(i);
+
 			o.tick();
 		}
 	}
