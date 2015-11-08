@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import org.sweatyink.com.InputHandler;
 import org.sweatyink.com.states.GameState;
+import org.sweatyink.com.states.MenuState;
 import org.sweatyink.com.states.PlayState;
 import org.sweatyink.com.states.StartState;
 
@@ -30,6 +31,7 @@ public class GameStateManager {
 	private void initStates(){
 		states[0] = new StartState("Start State", StartID, i, this);
 		states[1] = new PlayState("Play State", MainID,i, this);
+		states[2] = new MenuState("Menu State", MenuID,i, this);
 	}
 	
 	public void setState(int id){
