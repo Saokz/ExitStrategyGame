@@ -8,10 +8,10 @@ import org.sweatyink.com.InputHandler;
 import org.sweatyink.com.core.GameStateManager;
 
 public class StartState extends GameState{
-	private String[] options = {
+	/*private String[] options = {
 			"Start",
 			"Exit"
-	};
+	};*/
 	private int currentOption = 0;
 
 	public StartState(String name, int ID, InputHandler i, GameStateManager m){
@@ -19,7 +19,7 @@ public class StartState extends GameState{
 	}
 	
 	public void tick() {
-		if(i.down.clicked){
+		/*if(i.down.clicked){
 			currentOption++;
 			
 			if(currentOption >= options.length){
@@ -40,14 +40,14 @@ public class StartState extends GameState{
 			if(options[currentOption] == "Start"){
 				m.setState(m.MainID);
 			}
-		}
+		}*/
 	}
 
 	public void render(Graphics g) {
 		g.setColor(Color.RED);
 		g.drawString(GameMain.NAME, GameMain.WIDTH/2, GameMain.HEIGHT/2);
 		
-		for(int i = 0; i < options.length; i++){
+		/*for(int i = 0; i < options.length; i++){
 			if(currentOption == i){
 				g.setColor(Color.green);
 			}else{
@@ -55,7 +55,7 @@ public class StartState extends GameState{
 			}
 			
 			g.drawString(options[i], GameMain.WIDTH/2, GameMain.HEIGHT/4 + 15 * i);
-		}
+		}*/
 	}
 	
 }
