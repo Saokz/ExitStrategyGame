@@ -20,4 +20,9 @@ public class GameObject {
 	public void tick() {
 		
 	}
+	
+	public Rectangle getBounds(){
+		return new Rectangle(x, y, width, height);
+		
+	}
 }
