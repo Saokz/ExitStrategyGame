@@ -15,13 +15,16 @@ public class GameStateManager {
 	public static final int MenuID = 3;
 	public static final int PauseID = 4;
 	
+	private GameMain gm;
 	private int numStates = 5;
 	private GameState[] states = new GameState[numStates];
 	private GameState currentState;
 	private InputHandler i;
 	
-	public GameStateManager(InputHandler i){
+	public GameStateManager(InputHandler i, GameMain gm){
 		this.i = i;
+		
+		this.gm = gm;
 		
 		initStates();
 		
@@ -30,7 +33,7 @@ public class GameStateManager {
 	
 	private void initStates(){
 		states[0] = new StartState("Start State", StartID, i, this);
-		states[1] = new PlayState("Play State", MainID,i, this);
+		states[1] = new PlayState("Play State", MainID,i, this, gm);
 		states[2] = new MenuState("Menu State", MenuID,i, this);
 	}
 	
