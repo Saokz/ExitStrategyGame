@@ -19,13 +19,16 @@ public class GameMain extends Canvas implements Runnable{
 	private boolean running = false;
 	private Thread t;
 	private GameStateManager m;
+	private InputHandler i;
 	
 	public GameMain(){
-		m = new GameStateManager();
+		i = new InputHandler(this);
+		m = new GameStateManager(i);
 	}
 	
 	private void tick(){
 		m.tick();
+		i.tick();
 	}
 	
 	private void render(){
